@@ -1,0 +1,23 @@
+<div class="vh-100 d-flex justify-content-center align-items-center">
+    <div class="col-4 shadow rounded h-50 text-center p-5">
+        <h4 class="mb-4">login</h4>
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="username" formControlName="userName">
+            <div *ngIf="isSubmitted && f['userName'].errors">
+              <span class="text-danger" *ngIf="f['userName'].errors['required']">enter username</span>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <input type="text" class="form-control"  placeholder="password" formControlName="password">
+            <div *ngIf="isSubmitted && f['password'].errors">
+              <span class="text-danger" *ngIf="f['password'].errors['required']">enter password</span>
+            </div>
+          </div>
+          <div class="mb-3">
+            <button type="submit" class="btn btn-success col-6">Login</button>
+          </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<p>Todo {{myTodoList.todoList.length}}</p>
+
+
+<div class="containe-fluid">
+  <div class="row">
+    <div class="col">
+      <input class="form-control" type="texe" placeholder="add todo">
+    </div>
+    <div class="col">
+      <button class="btn btn-primary" (click)="addTodo()">add todo</button>
+    </div>
+  </div>
+</div>
+
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>todo</th>
+        <th>isdone</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of myTodoList.todoList">
+        <td>#</td>
+        <td>{{item.title}}</td>
+        <td>{{item.isComplete}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

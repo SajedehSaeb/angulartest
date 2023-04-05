@@ -1,0 +1,18 @@
+<p>test works!</p>
+
+<img src="{{imgurl}}" alt="img">
+<img [src]="imgurl" alt="img">
+
+<p>{{title}}</p>
+<p [textContent]="title"></p>
+{{title | uppercase}}
+<hr>
+{{date}}
+<hr>
+{{date | date:"shortTime"}}
+<hr><hr>
+
+<h3>rate</h3>
+<ngb-rating [max]="5" [(rate)]="starRate" [readonly]="false" [ngStyle]="{'color' : 'red'}"></ngb-rating>
+
+<p>{{starRate}}/5</p>
